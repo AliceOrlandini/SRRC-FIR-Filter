@@ -2,6 +2,7 @@ library ieee;
     use ieee.std_logic_1164.all;
     use ieee.numeric_std.all;
 
+
 entity fir_srrc is 
     generic (
         FilterOrder : natural := 22;
@@ -19,7 +20,8 @@ end entity fir_srrc;
 
 architecture bhv_fir_srrc of fir_srrc is
 
-    signal x_reg : array (0 to FilterOrder-1) of std_logic_vector(NBit-1 downto 0) := (others => (others => '0'));
+    type std_logic_vector_array is array (0 to FilterOrder-1) of std_logic_vector(NBit-1 downto 0);
+    signal x_reg : std_logic_vector_array := (others => (others => '0'));
 
     component d_flip_flop is
         generic (
@@ -33,7 +35,7 @@ architecture bhv_fir_srrc of fir_srrc is
             q : out std_logic_vector(NBit-1 downto 0)
         );
     end component d_flip_flop;
-
+begin
     -- register for input data
     input_reg_gen: for i in 0 to FilterOrder-1 generate
         first_iteration : if i = 0 generate 
@@ -48,7 +50,7 @@ architecture bhv_fir_srrc of fir_srrc is
                     d => x,
                     q => x_reg(0) -- connect the output of the first register to the signal x_reg(0) in order to connect it to the next register
                 );
-            end generate first_iteration;
+        end generate first_iteration;
         
         other_iterations : if i > 0 generate 
             d_flip_flop_i : d_flip_flop
@@ -63,5 +65,6 @@ architecture bhv_fir_srrc of fir_srrc is
                     q => x_reg(i) 
                 );
         end generate other_iterations;
+    end generate input_reg_gen;
     
 end architecture bhv_fir_srrc;
