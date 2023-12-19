@@ -39,10 +39,23 @@ architecture bhv_fir_srrc of fir_srrc is
             q : out std_logic_vector(NBit-1 downto 0)
         );
     end component d_flip_flop;
+
+    component ripple_carry_adder is
+        generic (
+            NBit : natural := 16
+        );
+        port (
+            a : in std_logic_vector(NBit-1 downto 0);
+            b : in std_logic_vector(NBit-1 downto 0);
+            c_in : in std_logic;
+            sum : out std_logic_vector(NBit-1 downto 0);
+            c_out : out std_logic
+        );
+    end component ripple_carry_adder;
 begin
     -- register for input data
     input_reg_gen: for i in 0 to FilterOrder-1 generate
-        first_iteration : if i = 0 generate 
+        input_reg_first_iteration : if i = 0 generate 
             d_flip_flop_0 : d_flip_flop
                 generic map (
                     NBit => NBit
@@ -55,9 +68,9 @@ begin
                     q => x_memory(0) -- connect the output of the first register to the signal x_memory(0) 
                                      -- in order to connect it to the next register
                 );
-        end generate first_iteration;
+        end generate input_reg_first_iteration;
         
-        other_iterations : if i > 0 generate 
+        input_reg_other_iterations : if i > 0 generate 
             d_flip_flop_i : d_flip_flop
                 generic map (
                     NBit => NBit
@@ -70,12 +83,7 @@ begin
                                         -- I have already connected to the signal x_memory(i-1)
                     q => x_memory(i) 
                 );
-        end generate other_iterations;
+        end generate input_reg_other_iterations;
     end generate input_reg_gen;
-
-    -- multiplication between the input data and the coefficients
-    -- multiplier_gen: for i in 0 to FilterOrder-1 generate
-        
-    -- end generate multiplier_gen;
     
 end architecture bhv_fir_srrc;
