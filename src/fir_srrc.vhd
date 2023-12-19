@@ -2,7 +2,6 @@ library ieee;
     use ieee.std_logic_1164.all;
     use ieee.numeric_std.all;
 
-
 entity fir_srrc is 
     generic (
         FilterOrder : natural := 22;
@@ -13,15 +12,20 @@ entity fir_srrc is
         resetn : in std_logic;
         enable : in std_logic;
         x : in std_logic_vector(NBit-1 downto 0);
-        -- c_k : in std_logic_vector(NBit-1 downto 0);
+        c_k : in signed(Nbit-1 downto 0);
         y : out std_logic_vector(NBit-1 downto 0)
     );
 end entity fir_srrc;
 
 architecture bhv_fir_srrc of fir_srrc is
 
-    type std_logic_vector_array is array (0 to FilterOrder-1) of std_logic_vector(NBit-1 downto 0);
-    signal x_reg : std_logic_vector_array := (others => (others => '0'));
+    -- for the input data I need to use a NBit vector
+    type std_logic_vector_Nbit_array is array (0 to FilterOrder-1) of std_logic_vector(NBit-1 downto 0);
+    signal x_memory : std_logic_vector_Nbit_array;
+
+    -- for the multiplication I need to use a 2*NBit vector
+    type std_logic_vector_2NBit_array is array (0 to FilterOrder-1) of std_logic_vector((2*NBit)-1 downto 0);
+    signal multiplications : std_logic_vector_2NBit_array;
 
     component d_flip_flop is
         generic (
@@ -48,7 +52,8 @@ begin
                     resetn => resetn,
                     enable => enable,
                     d => x,
-                    q => x_reg(0) -- connect the output of the first register to the signal x_reg(0) in order to connect it to the next register
+                    q => x_memory(0) -- connect the output of the first register to the signal x_memory(0) 
+                                     -- in order to connect it to the next register
                 );
         end generate first_iteration;
         
@@ -61,10 +66,16 @@ begin
                     clk => clk,
                     resetn => resetn,
                     enable => enable,
-                    d => x_reg(i-1), -- in this case d takes the value of the previous register that i have already connected to the signal x_reg(i-1)
-                    q => x_reg(i) 
+                    d => x_memory(i-1), -- in this case d takes the value of the previous register that 
+                                        -- I have already connected to the signal x_memory(i-1)
+                    q => x_memory(i) 
                 );
         end generate other_iterations;
     end generate input_reg_gen;
+
+    -- multiplication between the input data and the coefficients
+    -- multiplier_gen: for i in 0 to FilterOrder-1 generate
+        
+    -- end generate multiplier_gen;
     
 end architecture bhv_fir_srrc;

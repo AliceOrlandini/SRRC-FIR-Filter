@@ -15,21 +15,17 @@ entity d_flip_flop is
 end entity d_flip_flop;
 
 architecture bhv_d_flip_flop of d_flip_flop is
-    -- internal state of the flip-flop
-    signal internal_q : std_logic_vector(Nbit-1 downto 0) := (others => '0');
 begin
     PROC: process(clk, resetn)
     begin 
         if resetn = '0' then
-            -- reset of the internal state
-            internal_q <= (others => '0');
+            -- reset of the output of the flip-flop
+            q <= (others => '0');
         elsif rising_edge(clk) then
             if enable = '1' then
-                -- update of the internal state
-                internal_q <= d;
+                -- update the output of the flip-flop
+                q <= d;
             end if;
         end if;
     end process PROC;
-    -- output of the flip-flop
-    q <= internal_q;
 end architecture bhv_d_flip_flop;
