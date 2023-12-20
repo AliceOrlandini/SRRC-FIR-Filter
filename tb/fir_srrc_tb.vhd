@@ -20,19 +20,7 @@ architecture test of test_fir_srrc is
             resetn : in std_logic;
             enable : in std_logic;
             x : in std_logic_vector(NBit-1 downto 0);
-            c_k : in signed(Nbit-1 downto 0);
             y : out std_logic_vector(NBit-1 downto 0)
-        );
-    end component;
-
-    component coefficients is
-        generic (
-            FilterOrder : natural;
-            NBit : natural
-        );
-        port (
-            index : in natural range 0 to FilterOrder;
-            coeff : out signed(Nbit-1 downto 0)
         );
     end component;
 
@@ -41,10 +29,8 @@ architecture test of test_fir_srrc is
     signal enable : std_logic := '0';
     signal x : std_logic_vector(Nbit-1 downto 0) := (others => '0');
     signal y : std_logic_vector(Nbit-1 downto 0) := (others => '0');
-    signal c_k : signed(Nbit-1 downto 0) := to_signed(-246, Nbit);
     signal testing : boolean := true;
 
-    signal sum_index : natural range 0 to FilterOrder := 0;
 begin
     clk <= not clk after CLK_PERIOD/2 when testing else '0';
 
@@ -58,19 +44,9 @@ begin
             resetn => resetn,
             enable => enable,
             x => x,
-            c_k => c_k,
             y => y
         );
 
-    COEFF: coefficients
-        generic map (
-            FilterOrder => FilterOrder,
-            NBit => Nbit
-        )
-        port map (
-            index => sum_index,
-            coeff => c_k
-        );
 
     STIMULI: process
     begin
@@ -86,11 +62,72 @@ begin
 
         wait until rising_edge(clk);
         x <= "0000000000000001";
-        sum_index <= 0;
 
         wait until rising_edge(clk);
         x <= "0000000000000010";
-        sum_index <= 1;
+
+        wait until rising_edge(clk);
+        x <= "0000000000000011";
+
+        wait until rising_edge(clk);
+        x <= "0000000000000100";
+
+        wait until rising_edge(clk);
+        x <= "0000000000000101";
+
+        wait until rising_edge(clk);
+        x <= "0000000000000110";
+
+        wait until rising_edge(clk);
+        x <= "0000000000000111";
+
+        wait until rising_edge(clk);
+        x <= "0000000000001000";
+
+        wait until rising_edge(clk);
+        x <= "0000000000001001";
+
+        wait until rising_edge(clk);
+        x <= "0000000000001010";
+
+        wait until rising_edge(clk);
+        x <= "0000000000001011";
+
+        wait until rising_edge(clk);
+        x <= "0000000000001100";
+
+        wait until rising_edge(clk);
+        x <= "0000000000001101";
+
+        wait until rising_edge(clk);
+        x <= "0000000000001110";
+
+        wait until rising_edge(clk);
+        x <= "0000000000001111";
+
+        wait until rising_edge(clk);
+        x <= "0000000000010000";
+
+        wait until rising_edge(clk);
+        x <= "0000000000010001";
+
+        wait until rising_edge(clk);
+        x <= "0000000000010010";
+
+        wait until rising_edge(clk);
+        x <= "0000000000010011";
+
+        wait until rising_edge(clk);
+        x <= "0000000000010100";
+
+        wait until rising_edge(clk);
+        x <= "0000000000010101";
+
+        wait until rising_edge(clk);
+        x <= "0000000000010110";
+
+        wait until rising_edge(clk);
+        x <= "0000000000010111";
         
 
         wait until rising_edge(clk);
