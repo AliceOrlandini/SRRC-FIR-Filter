@@ -12,7 +12,6 @@ entity fir_srrc is
         resetn : in std_logic;
         enable : in std_logic;
         x : in std_logic_vector(NBit-1 downto 0);
-        c_k : in signed(Nbit-1 downto 0);
         y : out std_logic_vector(NBit-1 downto 0)
     );
 end entity fir_srrc;
@@ -39,10 +38,39 @@ architecture bhv_fir_srrc of fir_srrc is
             q : out std_logic_vector(NBit-1 downto 0)
         );
     end component d_flip_flop;
+
+    component coefficients is
+        generic (
+            FilterOrder : natural;
+            NBit : natural
+        );
+        port (
+            index : in natural range 0 to FilterOrder;
+            coeff : out signed(Nbit-1 downto 0)
+        );
+    end component;
+    signal sum_index : natural range 0 to FilterOrder := 0;
+    signal c_i : signed(Nbit-1 downto 0) := to_signed(-246, Nbit);
+
+    component ripple_carry_adder is
+        generic (
+            NBit : natural := 16
+        );
+        port (
+            a : in std_logic_vector(NBit-1 downto 0);
+            b : in std_logic_vector(NBit-1 downto 0);
+            c_in : in std_logic;
+            sum : out std_logic_vector(NBit-1 downto 0);
+            c_out : out std_logic
+        );
+    end component ripple_carry_adder;
+
+    type sum_array is array (0 to (FilterOrder/2)-1) of std_logic_vector(NBit-1 downto 0);
+    signal sum : sum_array;
 begin
     -- register for input data
     input_reg_gen: for i in 0 to FilterOrder-1 generate
-        first_iteration : if i = 0 generate 
+        input_reg_first_iteration : if i = 0 generate 
             d_flip_flop_0 : d_flip_flop
                 generic map (
                     NBit => NBit
@@ -55,9 +83,9 @@ begin
                     q => x_memory(0) -- connect the output of the first register to the signal x_memory(0) 
                                      -- in order to connect it to the next register
                 );
-        end generate first_iteration;
+        end generate input_reg_first_iteration;
         
-        other_iterations : if i > 0 generate 
+        input_reg_other_iterations : if i > 0 generate 
             d_flip_flop_i : d_flip_flop
                 generic map (
                     NBit => NBit
@@ -70,12 +98,47 @@ begin
                                         -- I have already connected to the signal x_memory(i-1)
                     q => x_memory(i) 
                 );
-        end generate other_iterations;
+        end generate input_reg_other_iterations;
     end generate input_reg_gen;
 
-    -- multiplication between the input data and the coefficients
-    -- multiplier_gen: for i in 0 to FilterOrder-1 generate
-        
-    -- end generate multiplier_gen;
+    COEFF: coefficients
+        generic map (
+            FilterOrder => FilterOrder,
+            NBit => Nbit
+        )
+        port map (
+            index => sum_index,
+            coeff => c_i
+        );
+
+    -- sum of the inputs 
+    sum_gen: for i in 0 to ((FilterOrder/2)-1) generate
+        sum_gen_0 : if i = 0 generate 
+            ripple_carry_adder_0 : ripple_carry_adder
+                generic map (
+                    NBit => NBit --+ 1 -- I need to add 1 bit because the sum of two NBit vectors can be a NBit+1 vector
+                )
+                port map ( 
+                    a => x, -- std_logic_vector(resize(signed(x), 17)),
+                    b => x_memory(FilterOrder-1),
+                    c_in => '0',
+                    sum => sum(0),
+                    c_out => open -- I don't need the carry out
+                );
+        end generate sum_gen_0;
+        sum_gen_i : if i > 0 generate
+            ripple_carry_adder_i : ripple_carry_adder
+                generic map (
+                    NBit => NBit --+ 1 -- I need to add 1 bit because the sum of two NBit vectors can be a NBit+1 vector
+                )
+                port map (
+                    a => x_memory(i-1),
+                    b => x_memory((FilterOrder)-1-i),
+                    c_in => '0',
+                    sum => sum(i),
+                    c_out => open -- I don't need the carry out 
+                );
+        end generate sum_gen_i;
+    end generate sum_gen;
     
 end architecture bhv_fir_srrc;

@@ -8,7 +8,7 @@ entity coefficients is
         Nbit : natural
     );
     port (
-        index : in natural range 0 to FilterOrder;
+        index : in natural range 0 to ((FilterOrder/2)-1);
         coeff : out signed(Nbit-1 downto 0)
     );
 end entity coefficients;
