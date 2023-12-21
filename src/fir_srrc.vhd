@@ -117,19 +117,19 @@ begin
 
     -- I have to convert the input data to signed in order to use the resize function
     -- resize(arg: signed, new_size: natural) that returns a signed vector. So I have to
-    -- convert the output of the resize function to std_logic_vector
+    -- convert the output of the resize function to std_logic_vector.
+    -- I have to use new signals because otherwire I get the error "is not globally static."
     x_resized <= std_logic_vector(resize(signed(x), Nbit+1)); 
-    -- resize x_memory to Nbit+1 in order to use it in the ripple_carry_adder
     x_resized_memory_gen: for i in 0 to FilterOrder-1 generate
         x_resized_memory_i : x_resized_memory(i) <= std_logic_vector(resize(signed(x_memory(i)), Nbit+1));
     end generate x_resized_memory_gen;
 
-    -- sum of the inputs 
+    -- sum of the inputs resized to Nbit+1
     sum_gen: for i in 0 to ((FilterOrder/2)-1) generate
         sum_gen_0 : if i = 0 generate 
             ripple_carry_adder_0 : ripple_carry_adder
                 generic map (
-                    NBit => NBit + 1 -- I need to add 1 bit because the sum of two NBit vectors can be a NBit+1 vector
+                    NBit => NBit + 1
                 )
                 port map (
                     a => x_resized, 
@@ -153,5 +153,7 @@ begin
                 );
         end generate sum_gen_i;
     end generate sum_gen;
+
+    -- multiplication of the sums with the coefficients
     
 end architecture bhv_fir_srrc;
