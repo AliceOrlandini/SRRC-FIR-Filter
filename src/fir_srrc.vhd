@@ -65,8 +65,12 @@ architecture bhv_fir_srrc of fir_srrc is
         );
     end component ripple_carry_adder;
 
-    type sum_array is array (0 to (FilterOrder/2)-1) of std_logic_vector(NBit-1 downto 0);
+    type sum_array is array (0 to (FilterOrder/2)-1) of std_logic_vector(NBit downto 0);
     signal sum : sum_array;
+
+    signal x_resized : std_logic_vector(Nbit downto 0);
+    type x_resized_array is array (0 to FilterOrder-1) of std_logic_vector(Nbit downto 0);
+    signal x_resized_memory : x_resized_array;
 begin
     -- register for input data
     input_reg_gen: for i in 0 to FilterOrder-1 generate
@@ -111,16 +115,25 @@ begin
             coeff => c_i
         );
 
+    -- I have to convert the input data to signed in order to use the resize function
+    -- resize(arg: signed, new_size: natural) that returns a signed vector. So I have to
+    -- convert the output of the resize function to std_logic_vector
+    x_resized <= std_logic_vector(resize(signed(x), Nbit+1)); 
+    -- resize x_memory to Nbit+1 in order to use it in the ripple_carry_adder
+    x_resized_memory_gen: for i in 0 to FilterOrder-1 generate
+        x_resized_memory_i : x_resized_memory(i) <= std_logic_vector(resize(signed(x_memory(i)), Nbit+1));
+    end generate x_resized_memory_gen;
+
     -- sum of the inputs 
     sum_gen: for i in 0 to ((FilterOrder/2)-1) generate
         sum_gen_0 : if i = 0 generate 
             ripple_carry_adder_0 : ripple_carry_adder
                 generic map (
-                    NBit => NBit --+ 1 -- I need to add 1 bit because the sum of two NBit vectors can be a NBit+1 vector
+                    NBit => NBit + 1 -- I need to add 1 bit because the sum of two NBit vectors can be a NBit+1 vector
                 )
-                port map ( 
-                    a => x, -- std_logic_vector(resize(signed(x), 17)),
-                    b => x_memory(FilterOrder-1),
+                port map (
+                    a => x_resized, 
+                    b => x_resized_memory(FilterOrder-1),
                     c_in => '0',
                     sum => sum(0),
                     c_out => open -- I don't need the carry out
@@ -129,14 +142,14 @@ begin
         sum_gen_i : if i > 0 generate
             ripple_carry_adder_i : ripple_carry_adder
                 generic map (
-                    NBit => NBit --+ 1 -- I need to add 1 bit because the sum of two NBit vectors can be a NBit+1 vector
+                    NBit => NBit + 1
                 )
                 port map (
-                    a => x_memory(i-1),
-                    b => x_memory((FilterOrder)-1-i),
+                    a => x_resized_memory(i-1),
+                    b => x_resized_memory((FilterOrder)-1-i),
                     c_in => '0',
                     sum => sum(i),
-                    c_out => open -- I don't need the carry out 
+                    c_out => open 
                 );
         end generate sum_gen_i;
     end generate sum_gen;
