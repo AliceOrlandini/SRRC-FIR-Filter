@@ -7,9 +7,9 @@ entity multiplier is
         NBit : natural := 16
     );
     port (
-        a : in signed(NBit-1 downto 0);
-        b : in signed(NBit-1 downto 0);
-        result : out signed(NBit*2-1 downto 0)
+        a : in std_logic_vector(NBit-1 downto 0);
+        b : in std_logic_vector(NBit-1 downto 0);
+        result : out std_logic_vector((2*NBit)-1 downto 0)
     );
 end entity multiplier;
 
@@ -17,7 +17,7 @@ architecture bhv_multiplier of multiplier is
 begin
     process(a, b)
     begin
-        result <= a * b;
+        result <= std_logic_vector(signed(a) * signed(b));
     end process;
 end architecture; 
 

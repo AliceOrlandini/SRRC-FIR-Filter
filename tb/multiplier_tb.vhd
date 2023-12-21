@@ -14,16 +14,16 @@ architecture test of test_multiplier is
             NBit : natural
         );
         port (
-            a : in signed(NBit-1 downto 0);
-            b : in signed(NBit-1 downto 0);
-            result : out signed(NBit*2-1 downto 0)
+            a : in std_logic_vector(NBit-1 downto 0);
+            b : in std_logic_vector(NBit-1 downto 0);
+            result : out std_logic_vector(NBit*2-1 downto 0)
         );
     end component;
 
     signal clk : std_logic := '0';
-    signal a : signed(Nbit-1 downto 0) := (others => '0');
-    signal b : signed(Nbit-1 downto 0) := (others => '0');
-    signal result : signed(Nbit*2-1 downto 0) := (others => '0');
+    signal a : std_logic_vector(Nbit-1 downto 0) := (others => '0');
+    signal b : std_logic_vector(Nbit-1 downto 0) := (others => '0');
+    signal result : std_logic_vector(Nbit*2-1 downto 0) := (others => '0');
     signal testing : boolean := true;
 
 begin

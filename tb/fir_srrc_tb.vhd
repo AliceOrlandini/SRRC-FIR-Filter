@@ -52,7 +52,7 @@ begin
     begin
         resetn <= '0';
         enable <= '0';
-        x <= (others => '0');
+        x <= "1000000000000000";
 
         wait until rising_edge(clk);
         resetn <= '1';
@@ -60,83 +60,31 @@ begin
         wait until rising_edge(clk);
         enable <= '1';
 
-        wait until rising_edge(clk);
+        wait for 1000 ns;
+        x <= "1000000000000000";
+
+        wait for 2000 ns;
+        x <= "1000000000000001";
+
+        wait for 3000 ns;
+        x <= "0111111111111110";
+
+        wait for 4000 ns;
+        x <= "0111111111111111";
+
+        wait for 5000 ns;
+        x <= "0000000000000000";
+
+        wait for 6000 ns;
         x <= "0000000000000001";
 
-        wait until rising_edge(clk);
-        x <= "0000000000000010";
-
-        wait until rising_edge(clk);
-        x <= "0000000000000011";
-
-        wait until rising_edge(clk);
-        x <= "0000000000000100";
-
-        wait until rising_edge(clk);
-        x <= "0000000000000101";
-
-        wait until rising_edge(clk);
-        x <= "0000000000000110";
-
-        wait until rising_edge(clk);
-        x <= "0000000000000111";
-
-        wait until rising_edge(clk);
-        x <= "0000000000001000";
-
-        wait until rising_edge(clk);
-        x <= "0000000000001001";
-
-        wait until rising_edge(clk);
-        x <= "0000000000001010";
-
-        wait until rising_edge(clk);
-        x <= "0000000000001011";
-
-        wait until rising_edge(clk);
-        x <= "0000000000001100";
-
-        wait until rising_edge(clk);
-        x <= "0000000000001101";
-
-        wait until rising_edge(clk);
-        x <= "0000000000001110";
-
-        wait until rising_edge(clk);
-        x <= "0000000000001111";
-
-        wait until rising_edge(clk);
-        x <= "0000000000010000";
-
-        wait until rising_edge(clk);
-        x <= "0000000000010001";
-
-        wait until rising_edge(clk);
-        x <= "0000000000010010";
-
-        wait until rising_edge(clk);
-        x <= "0000000000010011";
-
-        wait until rising_edge(clk);
-        x <= "0000000000010100";
-
-        wait until rising_edge(clk);
-        x <= "0000000000010101";
-
-        wait until rising_edge(clk);
-        x <= "0000000000010110";
-
-        wait until rising_edge(clk);
-        x <= "0000000000010111";
-        
-
-        wait until rising_edge(clk);
+        wait for 7000 ns;
         enable <= '0';
 
-        wait until rising_edge(clk);
+        wait for 8000 ns;
         resetn <= '0';
 
-        wait for 1000 ns;
+        wait for 9000 ns;
         testing <= false;
     end process;
 end architecture; 
