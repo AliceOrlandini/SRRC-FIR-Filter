@@ -216,8 +216,17 @@ begin
         end generate sum_others;
     end generate sum_all;
 
-    -- assign the output of the last adder to the output of the filter
-    -- but I have to resize it to NBit because the output of the filter is NBit
-    y <= intermediate_sum((FilterOrder/2)-1)((2*NBit) downto (NBit+1));
+    -- output register 
+    output_reg : d_flip_flop
+        generic map (
+            NBit => NBit
+        )
+        port map (
+            clk => clk,
+            resetn => resetn,
+            enable => enable,
+            d => intermediate_sum((FilterOrder/2)-1)((2*NBit) downto (NBit+1)), -- the output of the last adder resized to NBit (the most significant bits)
+            q => y
+        );
     
 end architecture bhv_fir_srrc;
