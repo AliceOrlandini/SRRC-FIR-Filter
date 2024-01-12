@@ -188,32 +188,63 @@ begin
 
     -- sum of the multiplications
     sum_all: for i in 0 to ((FilterOrder/2)-1) generate
-        sum_0 : if i = 0 generate
+        sum_stage_0: if i >= 0 and i <= 5 generate -- the first 6 adders
             ripple_carry_adder_0 : ripple_carry_adder
                 generic map (
                     NBit => (2*(NBit+1))
                 )
                 port map (
-                    a => multiplications(0),
-                    b => (others => '0'),
-                    c_in => '0',
-                    sum => intermediate_sum(0),
-                    c_out => open
-                );
-        end generate sum_0;
-        sum_others : if i > 0 generate 
-            ripple_carry_adder_i : ripple_carry_adder
-                generic map (
-                    NBit => (2*(NBit+1))
-                )
-                port map (
-                    a => multiplications(i),
-                    b => intermediate_sum(i-1),
+                    -- a takes the even indexes of the multiplications array
+                    -- b takes the odd indexes of the multiplications array
+                    a => multiplications(2*i), 
+                    b => multiplications(2*i+1),
                     c_in => '0',
                     sum => intermediate_sum(i),
                     c_out => open
                 );
-        end generate sum_others;
+        end generate sum_stage_0;
+        sum_stage_1: if i >= 6 and i <= 8 generate -- the next 3 adders
+            ripple_carry_adder_1 : ripple_carry_adder
+                generic map (
+                    NBit => (2*(NBit+1))
+                )
+                port map (
+                    -- a takes the even indexes of the intermediate_sum array
+                    -- b takes the odd indexes of the intermediate_sum array
+                    a => intermediate_sum(2*(i-6)), -- I have to subtract 6 because I have to start from 0
+                    b => intermediate_sum(2*(i-6)+1),
+                    c_in => '0',
+                    sum => intermediate_sum(i),
+                    c_out => open
+                );
+        end generate sum_stage_1;
+        sum_stage_2: if i = 9 generate 
+            ripple_carry_adder_2 : ripple_carry_adder
+                generic map (
+                    NBit => (2*(NBit+1))
+                )
+                port map (
+                    -- a takes the even indexes of the intermediate_sum array
+                    a => intermediate_sum(i-3),
+                    b => intermediate_sum(i-2),
+                    c_in => '0',
+                    sum => intermediate_sum(i),
+                    c_out => open
+                );
+        end generate sum_stage_2;
+        last_sum_stage: if i = 10 generate 
+            ripple_carry_adder_3 : ripple_carry_adder
+                generic map (
+                    NBit => (2*(NBit+1))
+                )
+                port map (
+                    a => intermediate_sum(i-1),
+                    b => intermediate_sum(i-2),
+                    c_in => '0',
+                    sum => intermediate_sum(i),
+                    c_out => open
+                );
+        end generate last_sum_stage;
     end generate sum_all;
 
     -- output register 

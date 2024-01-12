@@ -1,0 +1,12 @@
+#-----------------------------------------------------------
+# Vivado v2020.2 (64-bit)
+# SW Build 3064766 on Wed Nov 18 09:12:45 MST 2020
+# IP Build 3064653 on Wed Nov 18 14:17:31 MST 2020
+# Start of session at: Fri Jan 12 11:46:48 2024
+# Process ID: 10084
+# Current directory: C:/SRRC-FIR-Filter/vivado/fir_srrc/fir_srrc.runs/synth_1
+# Command line: vivado.exe -log fir_srrc.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source fir_srrc.tcl
+# Log file: C:/SRRC-FIR-Filter/vivado/fir_srrc/fir_srrc.runs/synth_1/fir_srrc.vds
+# Journal file: C:/SRRC-FIR-Filter/vivado/fir_srrc/fir_srrc.runs/synth_1\vivado.jou
+#-----------------------------------------------------------
+source fir_srrc.tcl -notrace

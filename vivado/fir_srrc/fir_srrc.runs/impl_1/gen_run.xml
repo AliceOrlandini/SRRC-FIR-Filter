@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GenRun Id="impl_1" LaunchPart="xc7z010clg400-1" LaunchTime="1705056768">
+  <File Type="OPT-HWDEF" Name="fir_srrc.hwdef"/>
+  <File Type="ROUTE-BUS-SKEW" Name="fir_srrc_bus_skew_routed.rpt"/>
+  <File Type="PA-DCP" Name="fir_srrc.dcp"/>
+  <File Type="BITSTR-BMM" Name="fir_srrc_bd.bmm"/>
+  <File Type="OPT-METHODOLOGY-DRC" Name="fir_srrc_methodology_drc_opted.rpt"/>
+  <File Type="INIT-TIMING" Name="fir_srrc_timing_summary_init.rpt"/>
+  <File Type="ROUTE-PWR" Name="fir_srrc_power_routed.rpt"/>
+  <File Type="PA-TCL" Name="fir_srrc.tcl"/>
+  <File Type="OPT-TIMING" Name="fir_srrc_timing_summary_opted.rpt"/>
+  <File Type="OPT-DCP" Name="fir_srrc_opt.dcp"/>
+  <File Type="ROUTE-PWR-SUM" Name="fir_srrc_power_summary_routed.pb"/>
+  <File Type="REPORTS-TCL" Name="fir_srrc_reports.tcl"/>
+  <File Type="OPT-DRC" Name="fir_srrc_drc_opted.rpt"/>
+  <File Type="PWROPT-DCP" Name="fir_srrc_pwropt.dcp"/>
+  <File Type="PWROPT-DRC" Name="fir_srrc_drc_pwropted.rpt"/>
+  <File Type="PWROPT-TIMING" Name="fir_srrc_timing_summary_pwropted.rpt"/>
+  <File Type="PLACE-DCP" Name="fir_srrc_placed.dcp"/>
+  <File Type="PLACE-IO" Name="fir_srrc_io_placed.rpt"/>
+  <File Type="PLACE-CLK" Name="fir_srrc_clock_utilization_placed.rpt"/>
+  <File Type="PLACE-UTIL" Name="fir_srrc_utilization_placed.rpt"/>
+  <File Type="PLACE-UTIL-PB" Name="fir_srrc_utilization_placed.pb"/>
+  <File Type="PLACE-CTRL" Name="fir_srrc_control_sets_placed.rpt"/>
+  <File Type="PLACE-SIMILARITY" Name="fir_srrc_incremental_reuse_placed.rpt"/>
+  <File Type="PLACE-PRE-SIMILARITY" Name="fir_srrc_incremental_reuse_pre_placed.rpt"/>
+  <File Type="PLACE-TIMING" Name="fir_srrc_timing_summary_placed.rpt"/>
+  <File Type="POSTPLACE-PWROPT-DCP" Name="fir_srrc_postplace_pwropt.dcp"/>
+  <File Type="BG-BIN" Name="fir_srrc.bin"/>
+  <File Type="POSTPLACE-PWROPT-TIMING" Name="fir_srrc_timing_summary_postplace_pwropted.rpt"/>
+  <File Type="PHYSOPT-DCP" Name="fir_srrc_physopt.dcp"/>
+  <File Type="PHYSOPT-DRC" Name="fir_srrc_drc_physopted.rpt"/>
+  <File Type="BITSTR-MSK" Name="fir_srrc.msk"/>
+  <File Type="PHYSOPT-TIMING" Name="fir_srrc_timing_summary_physopted.rpt"/>
+  <File Type="ROUTE-ERROR-DCP" Name="fir_srrc_routed_error.dcp"/>
+  <File Type="ROUTE-DCP" Name="fir_srrc_routed.dcp"/>
+  <File Type="ROUTE-BLACKBOX-DCP" Name="fir_srrc_routed_bb.dcp"/>
+  <File Type="ROUTE-DRC" Name="fir_srrc_drc_routed.rpt"/>
+  <File Type="ROUTE-DRC-PB" Name="fir_srrc_drc_routed.pb"/>
+  <File Type="ROUTE-DRC-RPX" Name="fir_srrc_drc_routed.rpx"/>
+  <File Type="BITSTR-MMI" Name="fir_srrc.mmi"/>
+  <File Type="ROUTE-METHODOLOGY-DRC" Name="fir_srrc_methodology_drc_routed.rpt"/>
+  <File Type="ROUTE-METHODOLOGY-DRC-RPX" Name="fir_srrc_methodology_drc_routed.rpx"/>
+  <File Type="ROUTE-METHODOLOGY-DRC-PB" Name="fir_srrc_methodology_drc_routed.pb"/>
+  <File Type="ROUTE-PWR-RPX" Name="fir_srrc_power_routed.rpx"/>
+  <File Type="ROUTE-STATUS" Name="fir_srrc_route_status.rpt"/>
+  <File Type="ROUTE-STATUS-PB" Name="fir_srrc_route_status.pb"/>
+  <File Type="ROUTE-TIMINGSUMMARY" Name="fir_srrc_timing_summary_routed.rpt"/>
+  <File Type="ROUTE-TIMING-PB" Name="fir_srrc_timing_summary_routed.pb"/>
+  <File Type="ROUTE-TIMING-RPX" Name="fir_srrc_timing_summary_routed.rpx"/>
+  <File Type="ROUTE-SIMILARITY" Name="fir_srrc_incremental_reuse_routed.rpt"/>
+  <File Type="ROUTE-CLK" Name="fir_srrc_clock_utilization_routed.rpt"/>
+  <File Type="ROUTE-BUS-SKEW-PB" Name="fir_srrc_bus_skew_routed.pb"/>
+  <File Type="ROUTE-BUS-SKEW-RPX" Name="fir_srrc_bus_skew_routed.rpx"/>
+  <File Type="POSTROUTE-PHYSOPT-DCP" Name="fir_srrc_postroute_physopt.dcp"/>
+  <File Type="POSTROUTE-PHYSOPT-BLACKBOX-DCP" Name="fir_srrc_postroute_physopt_bb.dcp"/>
+  <File Type="POSTROUTE-PHYSOPT-TIMING" Name="fir_srrc_timing_summary_postroute_physopted.rpt"/>
+  <File Type="POSTROUTE-PHYSOPT-TIMING-PB" Name="fir_srrc_timing_summary_postroute_physopted.pb"/>
+  <File Type="POSTROUTE-PHYSOPT-TIMING-RPX" Name="fir_srrc_timing_summary_postroute_physopted.rpx"/>
+  <File Type="POSTROUTE-PHYSOPT-BUS-SKEW" Name="fir_srrc_bus_skew_postroute_physopted.rpt"/>
+  <File Type="POSTROUTE-PHYSOPT-BUS-SKEW-PB" Name="fir_srrc_bus_skew_postroute_physopted.pb"/>
+  <File Type="BG-BIT" Name="fir_srrc.bit"/>
+  <File Type="POSTROUTE-PHYSOPT-BUS-SKEW-RPX" Name="fir_srrc_bus_skew_postroute_physopted.rpx"/>
+  <File Type="BITSTR-RBT" Name="fir_srrc.rbt"/>
+  <File Type="BITSTR-NKY" Name="fir_srrc.nky"/>
+  <File Type="PDI-FILE" Name="fir_srrc.pdi"/>
+  <File Type="RCFI_FILE" Name="fir_srrc.rcfi"/>
+  <File Type="CFI_FILE" Name="fir_srrc.cfi"/>
+  <File Type="RNPI_FILE" Name="fir_srrc.rnpi"/>
+  <File Type="NPI_FILE" Name="fir_srrc.npi"/>
+  <File Type="RBD_FILE" Name="fir_srrc.rbd"/>
+  <File Type="BITSTR-LTX" Name="debug_nets.ltx"/>
+  <File Type="BITSTR-LTX" Name="fir_srrc.ltx"/>
+  <File Type="BITSTR-SYSDEF" Name="fir_srrc.sysdef"/>
+  <File Type="BG-BGN" Name="fir_srrc.bgn"/>
+  <File Type="BG-DRC" Name="fir_srrc.drc"/>
+  <File Type="RDI-RDI" Name="fir_srrc.vdi"/>
+  <File Type="WBT-USG" Name="usage_statistics_webtalk.html"/>
+  <FileSet Name="sources" Type="DesignSrcs" RelSrcDir="$PSRCDIR/sources_1" RelGenDir="$PGENDIR/sources_1">
+    <Filter Type="Srcs"/>
+    <File Path="$PPRDIR/../../src/d_flip_flop.vhd">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PPRDIR/../../src/full_adder.vhd">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PPRDIR/../../src/multiplier.vhd">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PPRDIR/../../src/ripple_carry_adder.vhd">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PPRDIR/../../src/fir_srrc.vhd">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <Config>
+      <Option Name="DesignMode" Val="RTL"/>
+      <Option Name="TopModule" Val="fir_srrc"/>
+      <Option Name="TopAutoSet" Val="TRUE"/>
+    </Config>
+  </FileSet>
+  <FileSet Name="constrs_in" Type="Constrs" RelSrcDir="$PSRCDIR/constrs_1">
+    <Filter Type="Constrs"/>
+    <File Path="$PSRCDIR/constrs_1/new/constraint.xdc">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+      </FileInfo>
+    </File>
+    <Config>
+      <Option Name="TargetConstrsFile" Val="$PSRCDIR/constrs_1/new/constraint.xdc"/>
+      <Option Name="ConstrsType" Val="XDC"/>
+    </Config>
+  </FileSet>
+  <FileSet Name="utils" Type="Utils" RelSrcDir="$PSRCDIR/utils_1">
+    <Filter Type="Utils"/>
+    <Config>
+      <Option Name="TopAutoSet" Val="TRUE"/>
+    </Config>
+  </FileSet>
+  <Strategy Version="1" Minor="2">
+    <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2020"/>
+    <Step Id="init_design"/>
+    <Step Id="opt_design"/>
+    <Step Id="power_opt_design"/>
+    <Step Id="place_design"/>
+    <Step Id="post_place_power_opt_design"/>
+    <Step Id="phys_opt_design"/>
+    <Step Id="route_design"/>
+    <Step Id="post_route_phys_opt_design"/>
+    <Step Id="write_bitstream"/>
+  </Strategy>
+</GenRun>
