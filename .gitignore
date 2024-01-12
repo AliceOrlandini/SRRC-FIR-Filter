@@ -1,2 +1,6 @@
 modelsim/
-
+vivado/fir_srrc/fir_srrc.gen/
+vivado/fir_srrc/fir_srrc.ioplanning/
+vivado/fir_srrc/fir_srrc.ip_user_files/
+vivado/fir_srrc/fir_srrc.sim/
+test_fir_srrc_behav.wcfg

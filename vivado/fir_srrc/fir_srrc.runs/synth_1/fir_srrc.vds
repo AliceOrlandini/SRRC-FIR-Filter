@@ -1,0 +1,437 @@
+#-----------------------------------------------------------
+# Vivado v2020.2 (64-bit)
+# SW Build 3064766 on Wed Nov 18 09:12:45 MST 2020
+# IP Build 3064653 on Wed Nov 18 14:17:31 MST 2020
+# Start of session at: Fri Jan 12 11:46:48 2024
+# Process ID: 10084
+# Current directory: C:/SRRC-FIR-Filter/vivado/fir_srrc/fir_srrc.runs/synth_1
+# Command line: vivado.exe -log fir_srrc.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source fir_srrc.tcl
+# Log file: C:/SRRC-FIR-Filter/vivado/fir_srrc/fir_srrc.runs/synth_1/fir_srrc.vds
+# Journal file: C:/SRRC-FIR-Filter/vivado/fir_srrc/fir_srrc.runs/synth_1\vivado.jou
+#-----------------------------------------------------------
+source fir_srrc.tcl -notrace
+Command: synth_design -top fir_srrc -part xc7z010clg400-1
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xc7z010'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7z010'
+INFO: [Device 21-403] Loading part xc7z010clg400-1
+INFO: [Synth 8-7079] Multithreading enabled for synth_design using a maximum of 2 processes.
+INFO: [Synth 8-7078] Launching helper process for spawning children vivado processes
+INFO: [Synth 8-7075] Helper process launched with PID 592
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:06 ; elapsed = 00:00:12 . Memory (MB): peak = 923.770 ; gain = 0.000
+---------------------------------------------------------------------------------
+INFO: [Synth 8-638] synthesizing module 'fir_srrc' [C:/SRRC-FIR-Filter/src/fir_srrc.vhd:19]
+	Parameter FilterOrder bound to: 22 - type: integer 
+	Parameter NBit bound to: 16 - type: integer 
+	Parameter NBit bound to: 16 - type: integer 
+INFO: [Synth 8-3491] module 'd_flip_flop' declared at 'C:/SRRC-FIR-Filter/src/d_flip_flop.vhd:4' bound to instance 'd_flip_flop_0' of component 'd_flip_flop' [C:/SRRC-FIR-Filter/src/fir_srrc.vhd:94]
+INFO: [Synth 8-638] synthesizing module 'd_flip_flop' [C:/SRRC-FIR-Filter/src/d_flip_flop.vhd:17]
+	Parameter Nbit bound to: 16 - type: integer 
+INFO: [Synth 8-256] done synthesizing module 'd_flip_flop' (1#1) [C:/SRRC-FIR-Filter/src/d_flip_flop.vhd:17]
+	Parameter NBit bound to: 16 - type: integer 
+INFO: [Synth 8-3491] module 'd_flip_flop' declared at 'C:/SRRC-FIR-Filter/src/d_flip_flop.vhd:4' bound to instance 'd_flip_flop_i' of component 'd_flip_flop' [C:/SRRC-FIR-Filter/src/fir_srrc.vhd:109]
+	Parameter NBit bound to: 16 - type: integer 
+INFO: [Synth 8-3491] module 'd_flip_flop' declared at 'C:/SRRC-FIR-Filter/src/d_flip_flop.vhd:4' bound to instance 'd_flip_flop_i' of component 'd_flip_flop' [C:/SRRC-FIR-Filter/src/fir_srrc.vhd:109]
+	Parameter NBit bound to: 16 - type: integer 
+INFO: [Synth 8-3491] module 'd_flip_flop' declared at 'C:/SRRC-FIR-Filter/src/d_flip_flop.vhd:4' bound to instance 'd_flip_flop_i' of component 'd_flip_flop' [C:/SRRC-FIR-Filter/src/fir_srrc.vhd:109]
+	Parameter NBit bound to: 16 - type: integer 
+INFO: [Synth 8-3491] module 'd_flip_flop' declared at 'C:/SRRC-FIR-Filter/src/d_flip_flop.vhd:4' bound to instance 'd_flip_flop_i' of component 'd_flip_flop' [C:/SRRC-FIR-Filter/src/fir_srrc.vhd:109]
+	Parameter NBit bound to: 16 - type: integer 
+INFO: [Synth 8-3491] module 'd_flip_flop' declared at 'C:/SRRC-FIR-Filter/src/d_flip_flop.vhd:4' bound to instance 'd_flip_flop_i' of component 'd_flip_flop' [C:/SRRC-FIR-Filter/src/fir_srrc.vhd:109]
+	Parameter NBit bound to: 16 - type: integer 
+INFO: [Synth 8-3491] module 'd_flip_flop' declared at 'C:/SRRC-FIR-Filter/src/d_flip_flop.vhd:4' bound to instance 'd_flip_flop_i' of component 'd_flip_flop' [C:/SRRC-FIR-Filter/src/fir_srrc.vhd:109]
+	Parameter NBit bound to: 16 - type: integer 
+INFO: [Synth 8-3491] module 'd_flip_flop' declared at 'C:/SRRC-FIR-Filter/src/d_flip_flop.vhd:4' bound to instance 'd_flip_flop_i' of component 'd_flip_flop' [C:/SRRC-FIR-Filter/src/fir_srrc.vhd:109]
+	Parameter NBit bound to: 16 - type: integer 
+INFO: [Synth 8-3491] module 'd_flip_flop' declared at 'C:/SRRC-FIR-Filter/src/d_flip_flop.vhd:4' bound to instance 'd_flip_flop_i' of component 'd_flip_flop' [C:/SRRC-FIR-Filter/src/fir_srrc.vhd:109]
+	Parameter NBit bound to: 16 - type: integer 
+INFO: [Synth 8-3491] module 'd_flip_flop' declared at 'C:/SRRC-FIR-Filter/src/d_flip_flop.vhd:4' bound to instance 'd_flip_flop_i' of component 'd_flip_flop' [C:/SRRC-FIR-Filter/src/fir_srrc.vhd:109]
+	Parameter NBit bound to: 16 - type: integer 
+INFO: [Synth 8-3491] module 'd_flip_flop' declared at 'C:/SRRC-FIR-Filter/src/d_flip_flop.vhd:4' bound to instance 'd_flip_flop_i' of component 'd_flip_flop' [C:/SRRC-FIR-Filter/src/fir_srrc.vhd:109]
+	Parameter NBit bound to: 16 - type: integer 
+INFO: [Synth 8-3491] module 'd_flip_flop' declared at 'C:/SRRC-FIR-Filter/src/d_flip_flop.vhd:4' bound to instance 'd_flip_flop_i' of component 'd_flip_flop' [C:/SRRC-FIR-Filter/src/fir_srrc.vhd:109]
+	Parameter NBit bound to: 16 - type: integer 
+INFO: [Synth 8-3491] module 'd_flip_flop' declared at 'C:/SRRC-FIR-Filter/src/d_flip_flop.vhd:4' bound to instance 'd_flip_flop_i' of component 'd_flip_flop' [C:/SRRC-FIR-Filter/src/fir_srrc.vhd:109]
+	Parameter NBit bound to: 16 - type: integer 
+INFO: [Synth 8-3491] module 'd_flip_flop' declared at 'C:/SRRC-FIR-Filter/src/d_flip_flop.vhd:4' bound to instance 'd_flip_flop_i' of component 'd_flip_flop' [C:/SRRC-FIR-Filter/src/fir_srrc.vhd:109]
+	Parameter NBit bound to: 16 - type: integer 
+INFO: [Synth 8-3491] module 'd_flip_flop' declared at 'C:/SRRC-FIR-Filter/src/d_flip_flop.vhd:4' bound to instance 'd_flip_flop_i' of component 'd_flip_flop' [C:/SRRC-FIR-Filter/src/fir_srrc.vhd:109]
+	Parameter NBit bound to: 16 - type: integer 
+INFO: [Synth 8-3491] module 'd_flip_flop' declared at 'C:/SRRC-FIR-Filter/src/d_flip_flop.vhd:4' bound to instance 'd_flip_flop_i' of component 'd_flip_flop' [C:/SRRC-FIR-Filter/src/fir_srrc.vhd:109]
+	Parameter NBit bound to: 16 - type: integer 
+INFO: [Synth 8-3491] module 'd_flip_flop' declared at 'C:/SRRC-FIR-Filter/src/d_flip_flop.vhd:4' bound to instance 'd_flip_flop_i' of component 'd_flip_flop' [C:/SRRC-FIR-Filter/src/fir_srrc.vhd:109]
+	Parameter NBit bound to: 16 - type: integer 
+INFO: [Synth 8-3491] module 'd_flip_flop' declared at 'C:/SRRC-FIR-Filter/src/d_flip_flop.vhd:4' bound to instance 'd_flip_flop_i' of component 'd_flip_flop' [C:/SRRC-FIR-Filter/src/fir_srrc.vhd:109]
+	Parameter NBit bound to: 16 - type: integer 
+INFO: [Synth 8-3491] module 'd_flip_flop' declared at 'C:/SRRC-FIR-Filter/src/d_flip_flop.vhd:4' bound to instance 'd_flip_flop_i' of component 'd_flip_flop' [C:/SRRC-FIR-Filter/src/fir_srrc.vhd:109]
+	Parameter NBit bound to: 16 - type: integer 
+INFO: [Synth 8-3491] module 'd_flip_flop' declared at 'C:/SRRC-FIR-Filter/src/d_flip_flop.vhd:4' bound to instance 'd_flip_flop_i' of component 'd_flip_flop' [C:/SRRC-FIR-Filter/src/fir_srrc.vhd:109]
+	Parameter NBit bound to: 16 - type: integer 
+INFO: [Synth 8-3491] module 'd_flip_flop' declared at 'C:/SRRC-FIR-Filter/src/d_flip_flop.vhd:4' bound to instance 'd_flip_flop_i' of component 'd_flip_flop' [C:/SRRC-FIR-Filter/src/fir_srrc.vhd:109]
+	Parameter NBit bound to: 16 - type: integer 
+INFO: [Synth 8-3491] module 'd_flip_flop' declared at 'C:/SRRC-FIR-Filter/src/d_flip_flop.vhd:4' bound to instance 'd_flip_flop_i' of component 'd_flip_flop' [C:/SRRC-FIR-Filter/src/fir_srrc.vhd:109]
+	Parameter NBit bound to: 17 - type: integer 
+INFO: [Synth 8-3491] module 'ripple_carry_adder' declared at 'C:/SRRC-FIR-Filter/src/ripple_carry_adder.vhd:4' bound to instance 'ripple_carry_adder_0' of component 'ripple_carry_adder' [C:/SRRC-FIR-Filter/src/fir_srrc.vhd:136]
+INFO: [Synth 8-638] synthesizing module 'ripple_carry_adder' [C:/SRRC-FIR-Filter/src/ripple_carry_adder.vhd:17]
+	Parameter NBit bound to: 17 - type: integer 
+INFO: [Synth 8-3491] module 'full_adder' declared at 'C:/SRRC-FIR-Filter/src/full_adder.vhd:4' bound to instance 'FA_i' of component 'full_adder' [C:/SRRC-FIR-Filter/src/ripple_carry_adder.vhd:31]
+INFO: [Synth 8-638] synthesizing module 'full_adder' [C:/SRRC-FIR-Filter/src/full_adder.vhd:14]
+INFO: [Synth 8-256] done synthesizing module 'full_adder' (2#1) [C:/SRRC-FIR-Filter/src/full_adder.vhd:14]
+INFO: [Synth 8-3491] module 'full_adder' declared at 'C:/SRRC-FIR-Filter/src/full_adder.vhd:4' bound to instance 'FA_i' of component 'full_adder' [C:/SRRC-FIR-Filter/src/ripple_carry_adder.vhd:31]
+INFO: [Synth 8-3491] module 'full_adder' declared at 'C:/SRRC-FIR-Filter/src/full_adder.vhd:4' bound to instance 'FA_i' of component 'full_adder' [C:/SRRC-FIR-Filter/src/ripple_carry_adder.vhd:31]
+INFO: [Synth 8-3491] module 'full_adder' declared at 'C:/SRRC-FIR-Filter/src/full_adder.vhd:4' bound to instance 'FA_i' of component 'full_adder' [C:/SRRC-FIR-Filter/src/ripple_carry_adder.vhd:31]
+INFO: [Synth 8-3491] module 'full_adder' declared at 'C:/SRRC-FIR-Filter/src/full_adder.vhd:4' bound to instance 'FA_i' of component 'full_adder' [C:/SRRC-FIR-Filter/src/ripple_carry_adder.vhd:31]
+INFO: [Synth 8-3491] module 'full_adder' declared at 'C:/SRRC-FIR-Filter/src/full_adder.vhd:4' bound to instance 'FA_i' of component 'full_adder' [C:/SRRC-FIR-Filter/src/ripple_carry_adder.vhd:31]
+INFO: [Synth 8-3491] module 'full_adder' declared at 'C:/SRRC-FIR-Filter/src/full_adder.vhd:4' bound to instance 'FA_i' of component 'full_adder' [C:/SRRC-FIR-Filter/src/ripple_carry_adder.vhd:31]
+INFO: [Synth 8-3491] module 'full_adder' declared at 'C:/SRRC-FIR-Filter/src/full_adder.vhd:4' bound to instance 'FA_i' of component 'full_adder' [C:/SRRC-FIR-Filter/src/ripple_carry_adder.vhd:31]
+INFO: [Synth 8-3491] module 'full_adder' declared at 'C:/SRRC-FIR-Filter/src/full_adder.vhd:4' bound to instance 'FA_i' of component 'full_adder' [C:/SRRC-FIR-Filter/src/ripple_carry_adder.vhd:31]
+INFO: [Synth 8-3491] module 'full_adder' declared at 'C:/SRRC-FIR-Filter/src/full_adder.vhd:4' bound to instance 'FA_i' of component 'full_adder' [C:/SRRC-FIR-Filter/src/ripple_carry_adder.vhd:31]
+INFO: [Synth 8-3491] module 'full_adder' declared at 'C:/SRRC-FIR-Filter/src/full_adder.vhd:4' bound to instance 'FA_i' of component 'full_adder' [C:/SRRC-FIR-Filter/src/ripple_carry_adder.vhd:31]
+INFO: [Synth 8-3491] module 'full_adder' declared at 'C:/SRRC-FIR-Filter/src/full_adder.vhd:4' bound to instance 'FA_i' of component 'full_adder' [C:/SRRC-FIR-Filter/src/ripple_carry_adder.vhd:31]
+INFO: [Synth 8-3491] module 'full_adder' declared at 'C:/SRRC-FIR-Filter/src/full_adder.vhd:4' bound to instance 'FA_i' of component 'full_adder' [C:/SRRC-FIR-Filter/src/ripple_carry_adder.vhd:31]
+INFO: [Synth 8-3491] module 'full_adder' declared at 'C:/SRRC-FIR-Filter/src/full_adder.vhd:4' bound to instance 'FA_i' of component 'full_adder' [C:/SRRC-FIR-Filter/src/ripple_carry_adder.vhd:31]
+INFO: [Synth 8-3491] module 'full_adder' declared at 'C:/SRRC-FIR-Filter/src/full_adder.vhd:4' bound to instance 'FA_i' of component 'full_adder' [C:/SRRC-FIR-Filter/src/ripple_carry_adder.vhd:31]
+INFO: [Synth 8-3491] module 'full_adder' declared at 'C:/SRRC-FIR-Filter/src/full_adder.vhd:4' bound to instance 'FA_i' of component 'full_adder' [C:/SRRC-FIR-Filter/src/ripple_carry_adder.vhd:31]
+INFO: [Synth 8-3491] module 'full_adder' declared at 'C:/SRRC-FIR-Filter/src/full_adder.vhd:4' bound to instance 'FA_i' of component 'full_adder' [C:/SRRC-FIR-Filter/src/ripple_carry_adder.vhd:31]
+INFO: [Synth 8-256] done synthesizing module 'ripple_carry_adder' (3#1) [C:/SRRC-FIR-Filter/src/ripple_carry_adder.vhd:17]
+	Parameter NBit bound to: 17 - type: integer 
+INFO: [Synth 8-3491] module 'ripple_carry_adder' declared at 'C:/SRRC-FIR-Filter/src/ripple_carry_adder.vhd:4' bound to instance 'ripple_carry_adder_i' of component 'ripple_carry_adder' [C:/SRRC-FIR-Filter/src/fir_srrc.vhd:149]
+	Parameter NBit bound to: 17 - type: integer 
+INFO: [Synth 8-3491] module 'ripple_carry_adder' declared at 'C:/SRRC-FIR-Filter/src/ripple_carry_adder.vhd:4' bound to instance 'ripple_carry_adder_i' of component 'ripple_carry_adder' [C:/SRRC-FIR-Filter/src/fir_srrc.vhd:149]
+	Parameter NBit bound to: 17 - type: integer 
+INFO: [Synth 8-3491] module 'ripple_carry_adder' declared at 'C:/SRRC-FIR-Filter/src/ripple_carry_adder.vhd:4' bound to instance 'ripple_carry_adder_i' of component 'ripple_carry_adder' [C:/SRRC-FIR-Filter/src/fir_srrc.vhd:149]
+	Parameter NBit bound to: 17 - type: integer 
+INFO: [Synth 8-3491] module 'ripple_carry_adder' declared at 'C:/SRRC-FIR-Filter/src/ripple_carry_adder.vhd:4' bound to instance 'ripple_carry_adder_i' of component 'ripple_carry_adder' [C:/SRRC-FIR-Filter/src/fir_srrc.vhd:149]
+	Parameter NBit bound to: 17 - type: integer 
+INFO: [Synth 8-3491] module 'ripple_carry_adder' declared at 'C:/SRRC-FIR-Filter/src/ripple_carry_adder.vhd:4' bound to instance 'ripple_carry_adder_i' of component 'ripple_carry_adder' [C:/SRRC-FIR-Filter/src/fir_srrc.vhd:149]
+	Parameter NBit bound to: 17 - type: integer 
+INFO: [Synth 8-3491] module 'ripple_carry_adder' declared at 'C:/SRRC-FIR-Filter/src/ripple_carry_adder.vhd:4' bound to instance 'ripple_carry_adder_i' of component 'ripple_carry_adder' [C:/SRRC-FIR-Filter/src/fir_srrc.vhd:149]
+	Parameter NBit bound to: 17 - type: integer 
+INFO: [Synth 8-3491] module 'ripple_carry_adder' declared at 'C:/SRRC-FIR-Filter/src/ripple_carry_adder.vhd:4' bound to instance 'ripple_carry_adder_i' of component 'ripple_carry_adder' [C:/SRRC-FIR-Filter/src/fir_srrc.vhd:149]
+	Parameter NBit bound to: 17 - type: integer 
+INFO: [Synth 8-3491] module 'ripple_carry_adder' declared at 'C:/SRRC-FIR-Filter/src/ripple_carry_adder.vhd:4' bound to instance 'ripple_carry_adder_i' of component 'ripple_carry_adder' [C:/SRRC-FIR-Filter/src/fir_srrc.vhd:149]
+	Parameter NBit bound to: 17 - type: integer 
+INFO: [Synth 8-3491] module 'ripple_carry_adder' declared at 'C:/SRRC-FIR-Filter/src/ripple_carry_adder.vhd:4' bound to instance 'ripple_carry_adder_i' of component 'ripple_carry_adder' [C:/SRRC-FIR-Filter/src/fir_srrc.vhd:149]
+	Parameter NBit bound to: 17 - type: integer 
+INFO: [Synth 8-3491] module 'ripple_carry_adder' declared at 'C:/SRRC-FIR-Filter/src/ripple_carry_adder.vhd:4' bound to instance 'ripple_carry_adder_i' of component 'ripple_carry_adder' [C:/SRRC-FIR-Filter/src/fir_srrc.vhd:149]
+	Parameter NBit bound to: 17 - type: integer 
+INFO: [Synth 8-3491] module 'multiplier' declared at 'C:/SRRC-FIR-Filter/src/multiplier.vhd:5' bound to instance 'multiplier_i' of component 'multiplier' [C:/SRRC-FIR-Filter/src/fir_srrc.vhd:177]
+INFO: [Synth 8-638] synthesizing module 'multiplier' [C:/SRRC-FIR-Filter/src/multiplier.vhd:16]
+	Parameter NBit bound to: 17 - type: integer 
+INFO: [Synth 8-256] done synthesizing module 'multiplier' (4#1) [C:/SRRC-FIR-Filter/src/multiplier.vhd:16]
+	Parameter NBit bound to: 17 - type: integer 
+INFO: [Synth 8-3491] module 'multiplier' declared at 'C:/SRRC-FIR-Filter/src/multiplier.vhd:5' bound to instance 'multiplier_i' of component 'multiplier' [C:/SRRC-FIR-Filter/src/fir_srrc.vhd:177]
+	Parameter NBit bound to: 17 - type: integer 
+INFO: [Synth 8-3491] module 'multiplier' declared at 'C:/SRRC-FIR-Filter/src/multiplier.vhd:5' bound to instance 'multiplier_i' of component 'multiplier' [C:/SRRC-FIR-Filter/src/fir_srrc.vhd:177]
+	Parameter NBit bound to: 17 - type: integer 
+INFO: [Synth 8-3491] module 'multiplier' declared at 'C:/SRRC-FIR-Filter/src/multiplier.vhd:5' bound to instance 'multiplier_i' of component 'multiplier' [C:/SRRC-FIR-Filter/src/fir_srrc.vhd:177]
+	Parameter NBit bound to: 17 - type: integer 
+INFO: [Synth 8-3491] module 'multiplier' declared at 'C:/SRRC-FIR-Filter/src/multiplier.vhd:5' bound to instance 'multiplier_i' of component 'multiplier' [C:/SRRC-FIR-Filter/src/fir_srrc.vhd:177]
+	Parameter NBit bound to: 17 - type: integer 
+INFO: [Synth 8-3491] module 'multiplier' declared at 'C:/SRRC-FIR-Filter/src/multiplier.vhd:5' bound to instance 'multiplier_i' of component 'multiplier' [C:/SRRC-FIR-Filter/src/fir_srrc.vhd:177]
+	Parameter NBit bound to: 17 - type: integer 
+INFO: [Synth 8-3491] module 'multiplier' declared at 'C:/SRRC-FIR-Filter/src/multiplier.vhd:5' bound to instance 'multiplier_i' of component 'multiplier' [C:/SRRC-FIR-Filter/src/fir_srrc.vhd:177]
+	Parameter NBit bound to: 17 - type: integer 
+INFO: [Synth 8-3491] module 'multiplier' declared at 'C:/SRRC-FIR-Filter/src/multiplier.vhd:5' bound to instance 'multiplier_i' of component 'multiplier' [C:/SRRC-FIR-Filter/src/fir_srrc.vhd:177]
+	Parameter NBit bound to: 17 - type: integer 
+INFO: [Synth 8-3491] module 'multiplier' declared at 'C:/SRRC-FIR-Filter/src/multiplier.vhd:5' bound to instance 'multiplier_i' of component 'multiplier' [C:/SRRC-FIR-Filter/src/fir_srrc.vhd:177]
+	Parameter NBit bound to: 17 - type: integer 
+INFO: [Synth 8-3491] module 'multiplier' declared at 'C:/SRRC-FIR-Filter/src/multiplier.vhd:5' bound to instance 'multiplier_i' of component 'multiplier' [C:/SRRC-FIR-Filter/src/fir_srrc.vhd:177]
+	Parameter NBit bound to: 17 - type: integer 
+INFO: [Synth 8-3491] module 'multiplier' declared at 'C:/SRRC-FIR-Filter/src/multiplier.vhd:5' bound to instance 'multiplier_i' of component 'multiplier' [C:/SRRC-FIR-Filter/src/fir_srrc.vhd:177]
+	Parameter NBit bound to: 17 - type: integer 
+INFO: [Synth 8-3491] module 'multiplier' declared at 'C:/SRRC-FIR-Filter/src/multiplier.vhd:5' bound to instance 'multiplier_11' of component 'multiplier' [C:/SRRC-FIR-Filter/src/fir_srrc.vhd:166]
+	Parameter NBit bound to: 34 - type: integer 
+INFO: [Synth 8-3491] module 'ripple_carry_adder' declared at 'C:/SRRC-FIR-Filter/src/ripple_carry_adder.vhd:4' bound to instance 'ripple_carry_adder_0' of component 'ripple_carry_adder' [C:/SRRC-FIR-Filter/src/fir_srrc.vhd:192]
+INFO: [Synth 8-638] synthesizing module 'ripple_carry_adder__parameterized2' [C:/SRRC-FIR-Filter/src/ripple_carry_adder.vhd:17]
+	Parameter NBit bound to: 34 - type: integer 
+INFO: [Synth 8-3491] module 'full_adder' declared at 'C:/SRRC-FIR-Filter/src/full_adder.vhd:4' bound to instance 'FA_i' of component 'full_adder' [C:/SRRC-FIR-Filter/src/ripple_carry_adder.vhd:31]
+INFO: [Synth 8-3491] module 'full_adder' declared at 'C:/SRRC-FIR-Filter/src/full_adder.vhd:4' bound to instance 'FA_i' of component 'full_adder' [C:/SRRC-FIR-Filter/src/ripple_carry_adder.vhd:31]
+INFO: [Synth 8-3491] module 'full_adder' declared at 'C:/SRRC-FIR-Filter/src/full_adder.vhd:4' bound to instance 'FA_i' of component 'full_adder' [C:/SRRC-FIR-Filter/src/ripple_carry_adder.vhd:31]
+INFO: [Synth 8-3491] module 'full_adder' declared at 'C:/SRRC-FIR-Filter/src/full_adder.vhd:4' bound to instance 'FA_i' of component 'full_adder' [C:/SRRC-FIR-Filter/src/ripple_carry_adder.vhd:31]
+INFO: [Synth 8-3491] module 'full_adder' declared at 'C:/SRRC-FIR-Filter/src/full_adder.vhd:4' bound to instance 'FA_i' of component 'full_adder' [C:/SRRC-FIR-Filter/src/ripple_carry_adder.vhd:31]
+INFO: [Synth 8-3491] module 'full_adder' declared at 'C:/SRRC-FIR-Filter/src/full_adder.vhd:4' bound to instance 'FA_i' of component 'full_adder' [C:/SRRC-FIR-Filter/src/ripple_carry_adder.vhd:31]
+INFO: [Synth 8-3491] module 'full_adder' declared at 'C:/SRRC-FIR-Filter/src/full_adder.vhd:4' bound to instance 'FA_i' of component 'full_adder' [C:/SRRC-FIR-Filter/src/ripple_carry_adder.vhd:31]
+INFO: [Synth 8-3491] module 'full_adder' declared at 'C:/SRRC-FIR-Filter/src/full_adder.vhd:4' bound to instance 'FA_i' of component 'full_adder' [C:/SRRC-FIR-Filter/src/ripple_carry_adder.vhd:31]
+INFO: [Synth 8-3491] module 'full_adder' declared at 'C:/SRRC-FIR-Filter/src/full_adder.vhd:4' bound to instance 'FA_i' of component 'full_adder' [C:/SRRC-FIR-Filter/src/ripple_carry_adder.vhd:31]
+INFO: [Synth 8-3491] module 'full_adder' declared at 'C:/SRRC-FIR-Filter/src/full_adder.vhd:4' bound to instance 'FA_i' of component 'full_adder' [C:/SRRC-FIR-Filter/src/ripple_carry_adder.vhd:31]
+INFO: [Synth 8-3491] module 'full_adder' declared at 'C:/SRRC-FIR-Filter/src/full_adder.vhd:4' bound to instance 'FA_i' of component 'full_adder' [C:/SRRC-FIR-Filter/src/ripple_carry_adder.vhd:31]
+INFO: [Synth 8-3491] module 'full_adder' declared at 'C:/SRRC-FIR-Filter/src/full_adder.vhd:4' bound to instance 'FA_i' of component 'full_adder' [C:/SRRC-FIR-Filter/src/ripple_carry_adder.vhd:31]
+INFO: [Synth 8-3491] module 'full_adder' declared at 'C:/SRRC-FIR-Filter/src/full_adder.vhd:4' bound to instance 'FA_i' of component 'full_adder' [C:/SRRC-FIR-Filter/src/ripple_carry_adder.vhd:31]
+INFO: [Synth 8-3491] module 'full_adder' declared at 'C:/SRRC-FIR-Filter/src/full_adder.vhd:4' bound to instance 'FA_i' of component 'full_adder' [C:/SRRC-FIR-Filter/src/ripple_carry_adder.vhd:31]
+INFO: [Synth 8-3491] module 'full_adder' declared at 'C:/SRRC-FIR-Filter/src/full_adder.vhd:4' bound to instance 'FA_i' of component 'full_adder' [C:/SRRC-FIR-Filter/src/ripple_carry_adder.vhd:31]
+INFO: [Synth 8-3491] module 'full_adder' declared at 'C:/SRRC-FIR-Filter/src/full_adder.vhd:4' bound to instance 'FA_i' of component 'full_adder' [C:/SRRC-FIR-Filter/src/ripple_carry_adder.vhd:31]
+INFO: [Synth 8-3491] module 'full_adder' declared at 'C:/SRRC-FIR-Filter/src/full_adder.vhd:4' bound to instance 'FA_i' of component 'full_adder' [C:/SRRC-FIR-Filter/src/ripple_carry_adder.vhd:31]
+INFO: [Synth 8-3491] module 'full_adder' declared at 'C:/SRRC-FIR-Filter/src/full_adder.vhd:4' bound to instance 'FA_i' of component 'full_adder' [C:/SRRC-FIR-Filter/src/ripple_carry_adder.vhd:31]
+INFO: [Synth 8-3491] module 'full_adder' declared at 'C:/SRRC-FIR-Filter/src/full_adder.vhd:4' bound to instance 'FA_i' of component 'full_adder' [C:/SRRC-FIR-Filter/src/ripple_carry_adder.vhd:31]
+INFO: [Synth 8-3491] module 'full_adder' declared at 'C:/SRRC-FIR-Filter/src/full_adder.vhd:4' bound to instance 'FA_i' of component 'full_adder' [C:/SRRC-FIR-Filter/src/ripple_carry_adder.vhd:31]
+INFO: [Synth 8-3491] module 'full_adder' declared at 'C:/SRRC-FIR-Filter/src/full_adder.vhd:4' bound to instance 'FA_i' of component 'full_adder' [C:/SRRC-FIR-Filter/src/ripple_carry_adder.vhd:31]
+INFO: [Synth 8-3491] module 'full_adder' declared at 'C:/SRRC-FIR-Filter/src/full_adder.vhd:4' bound to instance 'FA_i' of component 'full_adder' [C:/SRRC-FIR-Filter/src/ripple_carry_adder.vhd:31]
+INFO: [Synth 8-3491] module 'full_adder' declared at 'C:/SRRC-FIR-Filter/src/full_adder.vhd:4' bound to instance 'FA_i' of component 'full_adder' [C:/SRRC-FIR-Filter/src/ripple_carry_adder.vhd:31]
+INFO: [Synth 8-3491] module 'full_adder' declared at 'C:/SRRC-FIR-Filter/src/full_adder.vhd:4' bound to instance 'FA_i' of component 'full_adder' [C:/SRRC-FIR-Filter/src/ripple_carry_adder.vhd:31]
+INFO: [Synth 8-3491] module 'full_adder' declared at 'C:/SRRC-FIR-Filter/src/full_adder.vhd:4' bound to instance 'FA_i' of component 'full_adder' [C:/SRRC-FIR-Filter/src/ripple_carry_adder.vhd:31]
+INFO: [Synth 8-3491] module 'full_adder' declared at 'C:/SRRC-FIR-Filter/src/full_adder.vhd:4' bound to instance 'FA_i' of component 'full_adder' [C:/SRRC-FIR-Filter/src/ripple_carry_adder.vhd:31]
+INFO: [Synth 8-3491] module 'full_adder' declared at 'C:/SRRC-FIR-Filter/src/full_adder.vhd:4' bound to instance 'FA_i' of component 'full_adder' [C:/SRRC-FIR-Filter/src/ripple_carry_adder.vhd:31]
+INFO: [Synth 8-3491] module 'full_adder' declared at 'C:/SRRC-FIR-Filter/src/full_adder.vhd:4' bound to instance 'FA_i' of component 'full_adder' [C:/SRRC-FIR-Filter/src/ripple_carry_adder.vhd:31]
+INFO: [Synth 8-3491] module 'full_adder' declared at 'C:/SRRC-FIR-Filter/src/full_adder.vhd:4' bound to instance 'FA_i' of component 'full_adder' [C:/SRRC-FIR-Filter/src/ripple_carry_adder.vhd:31]
+INFO: [Synth 8-3491] module 'full_adder' declared at 'C:/SRRC-FIR-Filter/src/full_adder.vhd:4' bound to instance 'FA_i' of component 'full_adder' [C:/SRRC-FIR-Filter/src/ripple_carry_adder.vhd:31]
+INFO: [Synth 8-3491] module 'full_adder' declared at 'C:/SRRC-FIR-Filter/src/full_adder.vhd:4' bound to instance 'FA_i' of component 'full_adder' [C:/SRRC-FIR-Filter/src/ripple_carry_adder.vhd:31]
+INFO: [Synth 8-3491] module 'full_adder' declared at 'C:/SRRC-FIR-Filter/src/full_adder.vhd:4' bound to instance 'FA_i' of component 'full_adder' [C:/SRRC-FIR-Filter/src/ripple_carry_adder.vhd:31]
+INFO: [Synth 8-3491] module 'full_adder' declared at 'C:/SRRC-FIR-Filter/src/full_adder.vhd:4' bound to instance 'FA_i' of component 'full_adder' [C:/SRRC-FIR-Filter/src/ripple_carry_adder.vhd:31]
+INFO: [Synth 8-3491] module 'full_adder' declared at 'C:/SRRC-FIR-Filter/src/full_adder.vhd:4' bound to instance 'FA_i' of component 'full_adder' [C:/SRRC-FIR-Filter/src/ripple_carry_adder.vhd:31]
+INFO: [Synth 8-256] done synthesizing module 'ripple_carry_adder__parameterized2' (4#1) [C:/SRRC-FIR-Filter/src/ripple_carry_adder.vhd:17]
+	Parameter NBit bound to: 34 - type: integer 
+INFO: [Synth 8-3491] module 'ripple_carry_adder' declared at 'C:/SRRC-FIR-Filter/src/ripple_carry_adder.vhd:4' bound to instance 'ripple_carry_adder_0' of component 'ripple_carry_adder' [C:/SRRC-FIR-Filter/src/fir_srrc.vhd:192]
+	Parameter NBit bound to: 34 - type: integer 
+INFO: [Synth 8-3491] module 'ripple_carry_adder' declared at 'C:/SRRC-FIR-Filter/src/ripple_carry_adder.vhd:4' bound to instance 'ripple_carry_adder_0' of component 'ripple_carry_adder' [C:/SRRC-FIR-Filter/src/fir_srrc.vhd:192]
+	Parameter NBit bound to: 34 - type: integer 
+INFO: [Synth 8-3491] module 'ripple_carry_adder' declared at 'C:/SRRC-FIR-Filter/src/ripple_carry_adder.vhd:4' bound to instance 'ripple_carry_adder_0' of component 'ripple_carry_adder' [C:/SRRC-FIR-Filter/src/fir_srrc.vhd:192]
+INFO: [Common 17-14] Message 'Synth 8-3491' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
+	Parameter NBit bound to: 34 - type: integer 
+	Parameter NBit bound to: 34 - type: integer 
+	Parameter NBit bound to: 34 - type: integer 
+	Parameter NBit bound to: 34 - type: integer 
+	Parameter NBit bound to: 34 - type: integer 
+	Parameter NBit bound to: 34 - type: integer 
+	Parameter NBit bound to: 34 - type: integer 
+	Parameter NBit bound to: 16 - type: integer 
+INFO: [Synth 8-256] done synthesizing module 'fir_srrc' (5#1) [C:/SRRC-FIR-Filter/src/fir_srrc.vhd:19]
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:08 ; elapsed = 00:00:17 . Memory (MB): peak = 923.770 ; gain = 0.000
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:09 ; elapsed = 00:00:18 . Memory (MB): peak = 923.770 ; gain = 0.000
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:09 ; elapsed = 00:00:18 . Memory (MB): peak = 923.770 ; gain = 0.000
+---------------------------------------------------------------------------------
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.077 . Memory (MB): peak = 923.770 ; gain = 0.000
+INFO: [Project 1-570] Preparing netlist for logic optimization
+
+Processing XDC Constraints
+Initializing timing engine
+Parsing XDC File [C:/SRRC-FIR-Filter/vivado/fir_srrc/fir_srrc.srcs/constrs_1/new/constraint.xdc]
+Finished Parsing XDC File [C:/SRRC-FIR-Filter/vivado/fir_srrc/fir_srrc.srcs/constrs_1/new/constraint.xdc]
+INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [C:/SRRC-FIR-Filter/vivado/fir_srrc/fir_srrc.srcs/constrs_1/new/constraint.xdc]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/fir_srrc_propImpl.xdc].
+Resolution: To avoid this warning, move constraints listed in [.Xil/fir_srrc_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
+Completed Processing XDC Constraints
+
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.007 . Memory (MB): peak = 975.883 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.099 . Memory (MB): peak = 975.883 ; gain = 0.000
+---------------------------------------------------------------------------------
+Finished Constraint Validation : Time (s): cpu = 00:00:19 ; elapsed = 00:00:32 . Memory (MB): peak = 975.883 ; gain = 52.113
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Loading Part and Timing Information
+---------------------------------------------------------------------------------
+Loading part: xc7z010clg400-1
+---------------------------------------------------------------------------------
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:19 ; elapsed = 00:00:32 . Memory (MB): peak = 975.883 ; gain = 52.113
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying 'set_property' XDC Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:19 ; elapsed = 00:00:32 . Memory (MB): peak = 975.883 ; gain = 52.113
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:20 ; elapsed = 00:00:33 . Memory (MB): peak = 975.883 ; gain = 52.113
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start RTL Component Statistics 
+---------------------------------------------------------------------------------
+Detailed RTL Component Info : 
++---XORs : 
+	   3 Input      1 Bit         XORs := 561   
++---Registers : 
+	               16 Bit    Registers := 23    
+---------------------------------------------------------------------------------
+Finished RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Part Resource Summary
+---------------------------------------------------------------------------------
+Part Resources:
+DSPs: 80 (col length:40)
+BRAMs: 120 (col length: RAMB18 40 RAMB36 20)
+---------------------------------------------------------------------------------
+Finished Part Resource Summary
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Cross Boundary and Area Optimization
+---------------------------------------------------------------------------------
+DSP Report: Generating DSP multiplications_gen[0].mul_gen_other.multiplier_i/result0, operation Mode is: A*(B:0x3fef1).
+DSP Report: operator multiplications_gen[0].mul_gen_other.multiplier_i/result0 is absorbed into DSP multiplications_gen[0].mul_gen_other.multiplier_i/result0.
+DSP Report: Generating DSP multiplications_gen[1].mul_gen_other.multiplier_i/result0, operation Mode is: A*(B:0x3ff0a).
+DSP Report: operator multiplications_gen[1].mul_gen_other.multiplier_i/result0 is absorbed into DSP multiplications_gen[1].mul_gen_other.multiplier_i/result0.
+DSP Report: Generating DSP multiplications_gen[2].mul_gen_other.multiplier_i/result0, operation Mode is: A*(B:0xfd).
+DSP Report: operator multiplications_gen[2].mul_gen_other.multiplier_i/result0 is absorbed into DSP multiplications_gen[2].mul_gen_other.multiplier_i/result0.
+DSP Report: Generating DSP multiplications_gen[3].mul_gen_other.multiplier_i/result0, operation Mode is: A*(B:0x2b6).
+DSP Report: operator multiplications_gen[3].mul_gen_other.multiplier_i/result0 is absorbed into DSP multiplications_gen[3].mul_gen_other.multiplier_i/result0.
+DSP Report: Generating DSP multiplications_gen[4].mul_gen_other.multiplier_i/result0, operation Mode is: A*(B:0xfd).
+DSP Report: operator multiplications_gen[4].mul_gen_other.multiplier_i/result0 is absorbed into DSP multiplications_gen[4].mul_gen_other.multiplier_i/result0.
+DSP Report: Generating DSP multiplications_gen[5].mul_gen_other.multiplier_i/result0, operation Mode is: A*(B:0x3fb33).
+DSP Report: operator multiplications_gen[5].mul_gen_other.multiplier_i/result0 is absorbed into DSP multiplications_gen[5].mul_gen_other.multiplier_i/result0.
+DSP Report: Generating DSP multiplications_gen[6].mul_gen_other.multiplier_i/result0, operation Mode is: A*(B:0x3f5f6).
+DSP Report: operator multiplications_gen[6].mul_gen_other.multiplier_i/result0 is absorbed into DSP multiplications_gen[6].mul_gen_other.multiplier_i/result0.
+DSP Report: Generating DSP multiplications_gen[7].mul_gen_other.multiplier_i/result0, operation Mode is: A*(B:0x3f935).
+DSP Report: operator multiplications_gen[7].mul_gen_other.multiplier_i/result0 is absorbed into DSP multiplications_gen[7].mul_gen_other.multiplier_i/result0.
+DSP Report: Generating DSP multiplications_gen[8].mul_gen_other.multiplier_i/result0, operation Mode is: A*(B:0xa09).
+DSP Report: operator multiplications_gen[8].mul_gen_other.multiplier_i/result0 is absorbed into DSP multiplications_gen[8].mul_gen_other.multiplier_i/result0.
+DSP Report: Generating DSP multiplications_gen[9].mul_gen_other.multiplier_i/result0, operation Mode is: A*(B:0x2507).
+DSP Report: operator multiplications_gen[9].mul_gen_other.multiplier_i/result0 is absorbed into DSP multiplications_gen[9].mul_gen_other.multiplier_i/result0.
+DSP Report: Generating DSP multiplications_gen[10].mul_gen_other.multiplier_i/result0, operation Mode is: A*(B:0x3e5e).
+DSP Report: operator multiplications_gen[10].mul_gen_other.multiplier_i/result0 is absorbed into DSP multiplications_gen[10].mul_gen_other.multiplier_i/result0.
+DSP Report: Generating DSP multiplications_gen[11].mul_gen_11.multiplier_11/result0, operation Mode is: A*(B:0x48be).
+DSP Report: operator multiplications_gen[11].mul_gen_11.multiplier_11/result0 is absorbed into DSP multiplications_gen[11].mul_gen_11.multiplier_11/result0.
+---------------------------------------------------------------------------------
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:01:04 ; elapsed = 00:01:25 . Memory (MB): peak = 975.883 ; gain = 52.113
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start ROM, RAM, DSP, Shift Register and Retiming Reporting
+---------------------------------------------------------------------------------
+
+DSP: Preliminary Mapping	Report (see note below)
++------------+---------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
+|Module Name | DSP Mapping   | A Size | B Size | C Size | D Size | P Size | AREG | BREG | CREG | DREG | ADREG | MREG | PREG | 
++------------+---------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
+|multiplier  | A*(B:0x3fef1) | 17     | 10     | -      | -      | 27     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|multiplier  | A*(B:0x3ff0a) | 17     | 9      | -      | -      | 26     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|multiplier  | A*(B:0xfd)    | 17     | 9      | -      | -      | 26     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|multiplier  | A*(B:0x2b6)   | 17     | 11     | -      | -      | 28     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|multiplier  | A*(B:0xfd)    | 17     | 9      | -      | -      | 26     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|multiplier  | A*(B:0x3fb33) | 17     | 12     | -      | -      | 29     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|multiplier  | A*(B:0x3f5f6) | 17     | 13     | -      | -      | 30     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|multiplier  | A*(B:0x3f935) | 17     | 12     | -      | -      | 29     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|multiplier  | A*(B:0xa09)   | 17     | 13     | -      | -      | 30     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|multiplier  | A*(B:0x2507)  | 17     | 15     | -      | -      | 32     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|multiplier  | A*(B:0x3e5e)  | 17     | 15     | -      | -      | 32     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|multiplier  | A*(B:0x48be)  | 16     | 16     | -      | -      | 32     | 0    | 0    | -    | -    | -     | 0    | 0    | 
++------------+---------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
+
+Note: The table above is a preliminary report that shows the DSPs inferred at the current stage of the synthesis flow. Some DSP may be reimplemented as non DSP primitives later in the synthesis flow. Multiple instantiated DSPs are reported only once.
+---------------------------------------------------------------------------------
+Finished ROM, RAM, DSP, Shift Register and Retiming Reporting
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying XDC Timing Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:01:20 ; elapsed = 00:01:44 . Memory (MB): peak = 997.336 ; gain = 73.566
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Timing Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Timing Optimization : Time (s): cpu = 00:01:39 ; elapsed = 00:02:07 . Memory (MB): peak = 1149.152 ; gain = 225.383
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Technology Mapping
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Technology Mapping : Time (s): cpu = 00:01:41 ; elapsed = 00:02:09 . Memory (MB): peak = 1150.203 ; gain = 226.434
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished IO Insertion : Time (s): cpu = 00:01:47 ; elapsed = 00:02:17 . Memory (MB): peak = 1150.203 ; gain = 226.434
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Instances
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Instances : Time (s): cpu = 00:01:47 ; elapsed = 00:02:17 . Memory (MB): peak = 1150.203 ; gain = 226.434
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Rebuilding User Hierarchy
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:01:48 ; elapsed = 00:02:17 . Memory (MB): peak = 1150.203 ; gain = 226.434
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Ports
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Ports : Time (s): cpu = 00:01:48 ; elapsed = 00:02:17 . Memory (MB): peak = 1150.203 ; gain = 226.434
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:01:48 ; elapsed = 00:02:17 . Memory (MB): peak = 1150.203 ; gain = 226.434
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Nets
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Nets : Time (s): cpu = 00:01:48 ; elapsed = 00:02:17 . Memory (MB): peak = 1150.203 ; gain = 226.434
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Writing Synthesis Report
+---------------------------------------------------------------------------------
+
+Report BlackBoxes: 
++-+--------------+----------+
+| |BlackBox name |Instances |
++-+--------------+----------+
++-+--------------+----------+
+
+Report Cell Usage: 
++------+--------+------+
+|      |Cell    |Count |
++------+--------+------+
+|1     |BUFG    |     1|
+|2     |DSP48E1 |    12|
+|3     |LUT1    |     1|
+|4     |LUT2    |    16|
+|5     |LUT3    |   196|
+|6     |LUT4    |    30|
+|7     |LUT5    |   454|
+|8     |LUT6    |    57|
+|9     |FDCE    |   368|
+|10    |IBUF    |    19|
+|11    |OBUF    |    16|
++------+--------+------+
+---------------------------------------------------------------------------------
+Finished Writing Synthesis Report : Time (s): cpu = 00:01:48 ; elapsed = 00:02:17 . Memory (MB): peak = 1150.203 ; gain = 226.434
+---------------------------------------------------------------------------------
+Synthesis finished with 0 errors, 0 critical warnings and 0 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:01:35 ; elapsed = 00:02:12 . Memory (MB): peak = 1150.203 ; gain = 174.320
+Synthesis Optimization Complete : Time (s): cpu = 00:01:48 ; elapsed = 00:02:18 . Memory (MB): peak = 1150.203 ; gain = 226.434
+INFO: [Project 1-571] Translating synthesized netlist
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.048 . Memory (MB): peak = 1150.203 ; gain = 0.000
+INFO: [Netlist 29-17] Analyzing 12 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1150.203 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+INFO: [Common 17-83] Releasing license: Synthesis
+128 Infos, 0 Warnings, 0 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:01:57 ; elapsed = 00:02:34 . Memory (MB): peak = 1150.203 ; gain = 226.434
+INFO: [Common 17-1381] The checkpoint 'C:/SRRC-FIR-Filter/vivado/fir_srrc/fir_srrc.runs/synth_1/fir_srrc.dcp' has been generated.
+INFO: [runtcl-4] Executing : report_utilization -file fir_srrc_utilization_synth.rpt -pb fir_srrc_utilization_synth.pb
+INFO: [Common 17-206] Exiting Vivado at Fri Jan 12 11:49:42 2024...
